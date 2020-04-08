@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import axios from "axios";
+import XMLParser from "react-xml-parser";
 
 class Grid extends Component {
   constructor(props) {
     super(props);
     this.state = {
       quotes: [],
+      twitter: [],
+      post: "",
+      postedtime: "",
       // quote: "",
       // author: "",
     };
@@ -27,7 +31,7 @@ class Grid extends Component {
       method: "GET",
       url: "https://e1yr-twitfeed-v1.p.rapidapi.com/feed.api",
       headers: {
-        "content-type": "application/octet-stream",
+        "content-type": "application/json",
         "x-rapidapi-host": "e1yr-twitfeed-v1.p.rapidapi.com",
         "x-rapidapi-key": "c2b5d5f7b2msh9e5a2057d3940eep1788b9jsn4e4205af7c5b",
       },
@@ -36,7 +40,18 @@ class Grid extends Component {
       },
     })
       .then((response) => {
-        console.log(response.data);
+        this.setState({
+          twitter: new XMLParser().parseFromString(response.data),
+          post: this.state.twitter.value,
+        });
+        this.setState({
+          post: this.state.twitter.children[0].children[1].children[0].value,
+          postedtime: this.state.twitter.children[0].children[1].children[2]
+            .value,
+        });
+        console.log(
+          this.state.twitter.children[0].children[1].children[2].value
+        );
       })
       .catch((error) => {
         console.log(error);
@@ -166,14 +181,23 @@ class Grid extends Component {
         </div>
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <div class="row">
+              <div class="col-md-2">
+                <img
+                  className="thumbnail img-responsive"
+                  src="https://image.flaticon.com/icons/svg/220/220233.svg"
+                  alt=""
+                />
+              </div>
+              <h5 class="card-title">
+                <a href="https://twitter.com/navod_a">@navod_a</a>
+              </h5>
+            </div>
+
+            <p class="card-text">{this.state.post}</p>
+
             <p class="card-text">
-              This is another card with title and supporting text below. This
-              card has some additional content to make it slightly taller
-              overall.
-            </p>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
+              <small class="text-muted">{this.state.postedtime}</small>
             </p>
           </div>
         </div>

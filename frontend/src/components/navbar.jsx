@@ -6,24 +6,13 @@ import "../css/navbar.css";
 class Navbar extends Component {
   render() {
     return (
-      // <ul className="topnav">
-      //   <li>
-      //     <a href="/">
-      //       <h2>Navoda's Digest</h2>
-      //     </a>
-      //   </li>
-      //   <li className="right">
-      //     {/* <h2><a href="/contact">Contact</a></h2> */}
-      //   </li>
-      // </ul>
-
       <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
+        <a className="navbar-brand" href="#">
           <h1>Navoda's Digest</h1>
         </a>
 
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#basicExampleNav"
@@ -31,15 +20,15 @@ class Navbar extends Component {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse text-right" id="basicExampleNav">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/">
+              <a className="nav-link" href="/">
                 Home
-                <span class="sr-only">(current)</span>
+                <span className="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
