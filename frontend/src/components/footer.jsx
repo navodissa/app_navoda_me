@@ -9,7 +9,7 @@ class Footer extends Component {
           <h6>
             <small>
               © 2020 Copyright
-              <a href="https://navoda.me/"> Navoda.me</a>
+              <a href="https://navoda.me/"> https://Navoda.me</a>
             </small>
           </h6>
         </div>
