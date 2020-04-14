@@ -19,4 +19,4 @@ class Footer extends Component {
 }
 
 export default Footer;
-// added a comment
+// added a comment for Jenkins testing
