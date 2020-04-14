@@ -19,3 +19,4 @@ class Footer extends Component {
 }
 
 export default Footer;
+// added a comment
