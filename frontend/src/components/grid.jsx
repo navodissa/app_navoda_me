@@ -59,9 +59,15 @@ class Grid extends Component {
   }
 
   render() {
+    const styles = {
+      color: "black",
+      textDecoration: "none",
+      height: "100px",
+    };
+
     return (
       <div class="card-columns">
-        <div class="card">
+        {/* <div class="card">
           <svg
             class="bd-placeholder-img card-img-top"
             width="100%"
@@ -73,6 +79,13 @@ class Grid extends Component {
           >
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#868e96" />
+            <image
+              href="../img/medium_1.png"
+              x="0"
+              y="0"
+              height="50px"
+              width="50px"
+            />
             <text x="50%" y="50%" fill="#dee2e6" dy=".3em">
               Image cap
             </text>
@@ -86,6 +99,31 @@ class Grid extends Component {
               This content is a little bit longer.
             </p>
           </div>
+        </div> */}
+
+        <div class="card p-3">
+          <a
+            href="https://medium.com/@navodissa/github-integration-for-atom-ide-f02f293ef1d3"
+            style={styles}
+          >
+            <img
+              class="card-img-top"
+              src="https://miro.medium.com/max/1400/0*QkLHzS3THKhgPPDL"
+              alt="Card image"
+              height="200"
+            />
+            <div class="card-body">
+              <h4 class="card-title">GitHub integration for Atom IDE</h4>
+
+              <p class="card-text">
+                Today I’m going to demonstrate how we can integrate Atom
+                application with your Github account. There are two ways...
+              </p>
+              {/* <a href="#" class="btn btn-warning">
+              See Profile
+            </a> */}
+            </div>
+          </a>
         </div>
 
         <div class="card p-3">
@@ -96,35 +134,35 @@ class Grid extends Component {
             </footer>
           </blockquote>
         </div>
-        <div class="card">
-          <svg
-            class="bd-placeholder-img card-img-top"
-            width="100%"
-            height="160"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-label="Placeholder: Image cap"
-            preserveAspectRatio="xMidYMid slice"
-            role="img"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#868e96" />
-            <text x="50%" y="50%" fill="#dee2e6" dy=".3em">
-              Image cap
-            </text>
-          </svg>
 
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This card has supporting text below as a natural lead-in to
-              additional content.
-            </p>
-            <p class="card-text">
+        <div class="card p-3">
+          <a
+            href="https://blog.bitsrc.io/building-a-serverless-webapp-why-you-should-consider-the-monolith-4f0105935589?source=extreme_sidebar---------0-2----------------------&gi=797c135b74f"
+            style={styles}
+          >
+            <img
+              class="card-img-top "
+              src="https://miro.medium.com/max/1400/1*AdVpUIKlkP-hFQhIgkJM5A.jpeg"
+              alt="Card image"
+              height="200"
+            />
+
+            <div class="card-body">
+              <h4 class="card-title">
+                Building a Serverless Web App: Why You Should Consider the
+                Monolith
+              </h4>
+              <p class="card-text">
+                With the technology advancements in the cloud, it is possible to
+                build full-stack web apps using...
+              </p>
+              {/* <p class="card-text">
               <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </div>
+            </p> */}
+            </div>
+          </a>
         </div>
-        <div class="card bg-primary text-white text-center p-3">
+        <div class="card bg-secondary text-white text-center p-3">
           <blockquote class="blockquote mb-0">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
@@ -137,19 +175,34 @@ class Grid extends Component {
             </footer>
           </blockquote>
         </div>
-        <div class="card text-center">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This card has a regular title and short paragraphy of text below
-              it.
-            </p>
-            <p class="card-text">
+
+        <div class="card p-3">
+          <a
+            href="https://medium.com/edureka/ci-cd-pipeline-5508227b19ca?source=extreme_main_feed---------2-59--------------------33d8b23a_d155_4306_a1e6_7e7235fc6b62--6"
+            style={styles}
+          >
+            <img
+              class="card-img-top"
+              src="https://miro.medium.com/max/1280/1*eTiDbrFARCizMbhkCcKbwg.jpeg"
+              alt="Card image"
+              height="200"
+            />
+            <div class="card-body">
+              <h4 class="card-title">
+                CI CD Pipeline: Learn How to Setup a CI CD Pipeline From Scratch
+              </h4>
+              <p class="card-text">
+                CI CD Pipeline implementation or the Continuous
+                Integration/Continuous Deployment software is the backbone...
+              </p>
+              {/* <p class="card-text">
               <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </div>
+            </p> */}
+            </div>
+          </a>
         </div>
-        <div class="card">
+
+        {/* <div class="card">
           <svg
             class="bd-placeholder-img card-img"
             width="100%"
@@ -165,7 +218,8 @@ class Grid extends Component {
               Card image
             </text>
           </svg>
-        </div>
+        </div> */}
+
         <div class="card p-3 text-right">
           <blockquote class="blockquote mb-0">
             <p>
