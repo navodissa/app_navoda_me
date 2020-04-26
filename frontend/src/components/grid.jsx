@@ -18,7 +18,7 @@ class Grid extends Component {
   // React Lifecycle method. This will load right before anything loads
   componentDidMount() {
     axios
-      .get("http://quotes.rest/qod.json?category=inspire")
+      .get("https://quotes.rest/qod.json?category=inspire")
       .then((response) => {
         this.setState({
           quotes: response.data.contents.quotes[0],
